@@ -4,7 +4,7 @@ return {
     opts = {
       transparent = false,
       on_colors = function(colors)
-        colors.bg = "#17171e"
+        colors.bg = "#0f111b"
       end,
       styles = {
         comments = {
