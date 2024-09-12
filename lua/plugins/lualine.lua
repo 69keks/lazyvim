@@ -5,6 +5,7 @@ return {
       "justinhj/battery.nvim",
     },
     opts = {
+      theme = "gruvbox_material",
       sections = {
         lualine_z = {
           function()

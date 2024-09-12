@@ -14,6 +14,7 @@ return {
       vim.cmd("let g:gruvbox_material_enable_italic=0")
       vim.cmd("let g:gruvbox_material_disable_italic_comment=1")
       vim.cmd("let g:gruvbox_material_float_style='dim'")
+      -- vim.cmd("let g:gruvbox_material_colors_override = {'bg0': ['#0f111b', '234']}")
 
       -- changing bg and border colors
       vim.api.nvim_set_hl(0, "FloatBorder", { link = "Normal" })
