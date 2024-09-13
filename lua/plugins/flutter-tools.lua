@@ -3,10 +3,9 @@ return {
     "akinsho/flutter-tools.nvim",
     lazy = true,
     ft = "dart",
-    --    dependencies = {
-    --      "nvim-lua/plenary.nvim",
-    --      "stevearc/dressing.nvim",
-    --    },
+    dependencies = {
+      "stevearc/dressing.nvim",
+    },
     keys = {
       { "<leader>ft", "<cmd>Telescope flutter commands<CR>", desc = "Flutter tools" },
     },
