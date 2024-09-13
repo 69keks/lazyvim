@@ -9,7 +9,7 @@ return {
         theme = {
           wave = {
             ui = {
-              bg = "#17171e",
+              bg = "#0f111b",
             },
           },
         },
