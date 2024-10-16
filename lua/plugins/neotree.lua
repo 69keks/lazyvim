@@ -3,7 +3,7 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = {
-        width = 32,
+        width = 28,
       },
       filesystem = {
         filtered_items = {
