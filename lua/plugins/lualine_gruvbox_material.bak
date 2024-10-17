@@ -114,3 +114,5 @@ return {
     })
   end,
 }
+
+-- vim:ft=lua
