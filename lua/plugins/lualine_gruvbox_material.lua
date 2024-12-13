@@ -1,63 +1,66 @@
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
-    -- "nvim-tree/nvim-web-devicons",
     "justinhj/battery.nvim",
   },
   config = function()
     local lualine = require("lualine")
 
     local colors = {
-      blue = "#83a598",
-      green = "#8ec07c",
+      blue = "#7daea3",
+      green = "#a9b665",
       violet = "#d3869b",
+      orange = "#e78a4e",
       yellow = "#d8a657",
-      red = "#FF4A4A",
-      cream = "#fff4d2",
-      black = "#1d1d1d",
+      red = "#ea6962",
+      cream = "#d4be98",
+      black = "#0f111b",
       grey = "#393939",
       dark = "#292929",
     }
 
     local gruv_material = {
       normal = {
-        a = { bg = colors.dark, fg = colors.cream, gui = "bold" },
-        b = { bg = colors.grey, fg = colors.cream, gui = "bold" },
-        c = { bg = colors.blue, fg = colors.black, gui = "bold" },
+        a = { bg = colors.dark, fg = colors.cream },
+        b = { bg = colors.grey, fg = colors.cream },
+        c = { bg = colors.blue, fg = colors.black },
       },
       insert = {
-        a = { bg = colors.blue, fg = colors.black, gui = "bold" },
-        c = { bg = colors.violet, fg = colors.black, gui = "bold" },
+        a = { bg = colors.blue, fg = colors.black },
+        c = { bg = colors.orange, fg = colors.black },
       },
       visual = {
-        a = { bg = colors.violet, fg = colors.black, gui = "bold" },
-        c = { bg = colors.dark, fg = colors.cream, gui = "bold" },
+        a = { bg = colors.violet, fg = colors.black },
+        c = { bg = colors.dark, fg = colors.cream },
       },
       command = {
-        a = { bg = colors.green, fg = colors.black, gui = "bold" },
-        c = { bg = colors.black, fg = colors.cream, gui = "bold" },
+        a = { bg = colors.green, fg = colors.black },
+        c = { bg = colors.black, fg = colors.cream },
       },
       replace = {
-        a = { bg = colors.blue, fg = colors.black, gui = "bold" },
-        c = { bg = colors.violet, fg = colors.black, gui = "bold" },
+        a = { bg = colors.blue, fg = colors.black },
+        c = { bg = colors.violet, fg = colors.black },
       },
       inactive = {
-        a = { bg = colors.green, fg = colors.black, gui = "bold" },
-        c = { bg = colors.black, fg = colors.cream, gui = "bold" },
+        a = { bg = colors.green, fg = colors.black, gui = "italic" },
+        c = { bg = colors.black, fg = colors.cream, gui = "italic" },
       },
     }
 
     -- configure lualine with modified theme
     lualine.setup({
       options = {
+        globalstatus = false,
         theme = gruv_material,
+        -- theme = "auto",
         disabled_filetypes = {
           statusline = {
             "dashboard",
             "neo-tree",
+            "snacks_dashboard",
           },
         },
-        component_separators = { left = "│", right = "│" },
+        component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
       },
       sections = {
@@ -71,8 +74,8 @@ return {
           {
             "buffers",
             buffers_color = {
-              active = { bg = colors.yellow, fg = colors.black, gui = "bold" },
-              inactive = { bg = colors.grey, fg = colors.cream, gui = "italic" },
+              active = { bg = colors.yellow, fg = colors.black, gui = "italic" },
+              inactive = { bg = colors.grey, fg = colors.cream },
             },
             symbols = {
               modified = " ●",
@@ -85,8 +88,8 @@ return {
         lualine_c = {},
         lualine_x = {},
         lualine_y = {
-          "searchcount",
           "selectioncount",
+          "location",
           "progress",
           "filetype",
         },
@@ -114,5 +117,3 @@ return {
     })
   end,
 }
-
--- vim:ft=lua

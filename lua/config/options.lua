@@ -4,3 +4,6 @@
 
 -- Disable stupid current line highlighting as it looks ugly against transparent and blurred backgrounds
 vim.opt.cursorline = false
+
+-- Set terminal colors in neovim
+vim.opt.termguicolors = true

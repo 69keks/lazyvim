@@ -1,19 +1,14 @@
 return {
   {
     "folke/tokyonight.nvim",
+    lazy = true,
     opts = {
-      transparent = true,
-      -- on_colors = function(colors)
-      --   colors.bg = "#0f111b"
-      -- end,
-      styles = {
-        comments = {
-          italic = true,
-        },
-        keywords = {
-          italic = false,
-        },
-      },
+      style = "night",
+      light_style = "day",
+      transparent = false,
+      terminal_colors = true,
+      cache = true,
+      lualine_bold = false,
     },
   },
 }
